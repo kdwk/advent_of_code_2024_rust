@@ -1,1 +1,0 @@
-/var/home/kdwk/Projects/personal/advent_of_code/target/debug/advent_of_code: /var/home/kdwk/Projects/personal/advent_of_code/src/day1.rs /var/home/kdwk/Projects/personal/advent_of_code/src/day2.rs /var/home/kdwk/Projects/personal/advent_of_code/src/main.rs

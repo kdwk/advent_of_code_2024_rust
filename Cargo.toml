@@ -4,3 +4,6 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+documents = "0.1.2"
+easy-ext = "1.0.2"
+regex = "1.11.1"

@@ -52,27 +52,29 @@ fn permutations(no_of_numbers: usize) -> Vec<Vec<Operator>> {
 
 pub fn task1() -> impl Display {
     let equations = parse("day7.txt");
-    let mut result = 0;
-    for equation in equations {
-        for permutation in permutations(equation.numbers.len() - 1) {
-            let mut intermediate = equation.numbers[0];
-            for (index, operator) in permutation.clone().into_iter().enumerate() {
-                match operator {
-                    Operator::Add => intermediate += equation.numbers[index + 1],
-                    Operator::Mul => intermediate *= equation.numbers[index + 1],
-                    Operator::Concat => {
-                        intermediate = (intermediate.to_string()
-                            + &equation.numbers[index + 1].to_string())
-                            .parse()
-                            .unwrap()
+    // let mut result = 0;
+    equations
+        .par_iter()
+        .map(|equation| {
+            for permutation in permutations(equation.numbers.len() - 1) {
+                let mut intermediate = equation.numbers[0];
+                for (index, operator) in permutation.clone().into_iter().enumerate() {
+                    match operator {
+                        Operator::Add => intermediate += equation.numbers[index + 1],
+                        Operator::Mul => intermediate *= equation.numbers[index + 1],
+                        Operator::Concat => {
+                            intermediate = (intermediate.to_string()
+                                + &equation.numbers[index + 1].to_string())
+                                .parse()
+                                .unwrap()
+                        }
                     }
                 }
+                if intermediate == equation.answer {
+                    return equation.answer;
+                }
             }
-            if intermediate == equation.answer {
-                result += equation.answer;
-                break;
-            }
-        }
-    }
-    result
+            0
+        })
+        .sum::<i64>()
 }

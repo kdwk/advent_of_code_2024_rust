@@ -110,7 +110,7 @@ fn task(
 }
 
 pub fn task1() -> impl Display {
-    let map = parse("day8.txt");
+    let map = parse("inputs/day8.txt");
     task(map, |location, antenna_set| {
         let distance_from_1 = Location::distance(&location, antenna_set[0]);
         let distance_from_2 = Location::distance(&location, antenna_set[1]);
@@ -120,7 +120,7 @@ pub fn task1() -> impl Display {
 }
 
 pub fn task2() -> impl Display {
-    let map = parse("day8.txt");
+    let map = parse("inputs/day8.txt");
     task(map, |location, antenna_set| {
         Location::in_single_line(&location, antenna_set[0], antenna_set[1])
     })

@@ -148,7 +148,7 @@ fn parse(file: &str) -> PatrolMap {
 }
 
 pub fn task1() -> impl Display {
-    let mut map = parse("day6.txt");
+    let mut map = parse("inputs/day6.txt");
     while map.guard_in_bound() {
         map.guard_walk();
     }

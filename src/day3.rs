@@ -17,7 +17,7 @@ fn parse(file: &str) -> String {
 }
 
 pub fn task1() -> impl Display {
-    let input = parse("day3.txt");
+    let input = parse("inputs/day3.txt");
     let mut int_pairs = vec![];
     || -> Result<(), Box<dyn Error>> {
         let mul_pattern = Regex::new(r"mul\([0123456789]+,[0123456789]+\)")?;
@@ -39,7 +39,7 @@ pub fn task1() -> impl Display {
 }
 
 pub fn task2() -> impl Display {
-    let input = parse("day3.txt");
+    let input = parse("inputs/day3.txt");
     let mut int_pairs = vec![];
     let mut valid = true;
     || -> Result<(), Box<dyn Error>> {

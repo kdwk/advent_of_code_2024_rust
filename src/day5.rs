@@ -50,7 +50,7 @@ fn parse(file: &str) -> (HashMap<i32, Vec<i32>>, Vec<Vec<i32>>) {
 }
 
 pub fn task1() -> impl Display {
-    let (ordering_rules, updates) = parse("day5.txt");
+    let (ordering_rules, updates) = parse("inputs/day5.txt");
     let mut result = 0;
     for update in updates {
         let mut update_is_correct = true;
@@ -82,7 +82,7 @@ fn move_up<T: PartialEq<T>>(element: T, vec: &mut Vec<T>) -> usize {
 }
 
 pub fn task2() -> impl Display {
-    let (ordering_rules, updates) = parse("day5.txt");
+    let (ordering_rules, updates) = parse("inputs/day5.txt");
     let mut result = 0;
     for update in updates {
         let mut update_did_change = false;

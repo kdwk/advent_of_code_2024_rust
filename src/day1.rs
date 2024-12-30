@@ -27,7 +27,7 @@ fn parse(file: &str) -> (Vec<u32>, Vec<u32>) {
 
 pub fn task1() -> impl Display {
     let mut answer = 0;
-    let (mut first_list, mut second_list) = parse("day1.txt");
+    let (mut first_list, mut second_list) = parse("inputs/day1.txt");
     first_list.sort();
     second_list.sort();
     for (index, number) in first_list.into_iter().enumerate() {
@@ -38,7 +38,7 @@ pub fn task1() -> impl Display {
 
 pub fn task2() -> impl Display {
     let mut answer: usize = 0;
-    let (first_list, second_list) = parse("day1.txt");
+    let (first_list, second_list) = parse("inputs/day1.txt");
     for number in first_list.into_iter() {
         answer += number as usize
             * (&second_list)

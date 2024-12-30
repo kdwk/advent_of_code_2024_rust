@@ -83,11 +83,11 @@ fn is_safe_with_dampener(report: &Vec<i32>) -> bool {
 }
 
 pub fn task1() -> impl Display {
-    let reports = parse("day2.txt");
+    let reports = parse("inputs/day2.txt");
     reports.into_iter().filter(is_safe).count()
 }
 
 pub fn task2() -> impl Display {
-    let reports = parse("day2.txt");
+    let reports = parse("inputs/day2.txt");
     reports.into_iter().filter(is_safe_with_dampener).count()
 }

@@ -200,7 +200,7 @@ fn parse(file: &str) -> (Vec<String>) {
 }
 
 pub fn task1() -> impl Display {
-    let input = parse("day4.txt");
+    let input = parse("inputs/day4.txt");
     let mut result = 0;
     for (y, line) in (&input).into_iter().enumerate() {
         for (x, char) in line.chars().enumerate() {
@@ -217,7 +217,7 @@ pub fn task1() -> impl Display {
 }
 
 pub fn task2() -> impl Display {
-    let input = parse("day4.txt");
+    let input = parse("inputs/day4.txt");
     let mut result = 0;
     for (y, line) in (&input).into_iter().enumerate() {
         for (x, char) in line.chars().enumerate() {

@@ -51,8 +51,7 @@ fn permutations(no_of_numbers: usize) -> Vec<Vec<Operator>> {
 }
 
 pub fn task1() -> impl Display {
-    let equations = parse("day7.txt");
-    // let mut result = 0;
+    let equations = parse("inputs/day7.txt");
     equations
         .par_iter()
         .map(|equation| {

@@ -20,5 +20,5 @@ mod prelude {
 }
 
 fn main() {
-    println!("{}", day8::task2());
+    println!("{}", day9::task2());
 }

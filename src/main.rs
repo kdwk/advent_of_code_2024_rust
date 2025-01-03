@@ -7,6 +7,7 @@ mod day6;
 mod day7;
 mod day8;
 mod day9;
+mod day10;
 
 mod prelude {
     pub use documents::prelude::*;
@@ -15,10 +16,11 @@ mod prelude {
     pub use std::{collections::{HashMap, HashSet}, env::current_dir, error::Error, fmt::Display};
     pub use itertools::{repeat_n, Itertools};
     pub use rayon::prelude::*;
+    pub use std::ops::Index;
 
     pub const OK: Result<(), Box<dyn Error>> = Ok(());
 }
 
 fn main() {
-    println!("{}", day9::task2());
+    println!("{}", day10::task2());
 }

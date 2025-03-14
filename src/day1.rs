@@ -26,14 +26,15 @@ fn parse(file: &str) -> (Vec<u32>, Vec<u32>) {
 }
 
 pub fn task1() -> impl Display {
-    let mut answer = 0;
+    // let mut answer = 0;
     let (mut first_list, mut second_list) = parse("inputs/day1.txt");
     first_list.sort();
     second_list.sort();
-    for (index, number) in first_list.into_iter().enumerate() {
-        answer += number.abs_diff(second_list[index]);
-    }
-    answer
+    first_list
+        .into_iter()
+        .enumerate()
+        .map(|(index, number)| number.abs_diff(second_list[index]))
+        .sum::<u32>()
 }
 
 pub fn task2() -> impl Display {

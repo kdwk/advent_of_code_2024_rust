@@ -37,7 +37,7 @@ fn score(stone: Stone, depth: u32, max_depth: u32) -> i64 {
 }
 
 /// Rock value map to number of rocks
-fn parse<'stone>(file: &str) -> Vec<Stone> {
+fn parse(file: &str) -> Vec<Stone> {
     let mut result = vec![];
     with(
         &[Document::at_path(

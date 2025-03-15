@@ -3,7 +3,7 @@ use crate::prelude::*;
 #[ext]
 impl<T> Vec<T> {
     fn last(&self) -> &T {
-        &self[self.len()-1]
+        &self[self.len() - 1]
     }
 }
 

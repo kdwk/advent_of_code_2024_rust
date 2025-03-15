@@ -1,31 +1,10 @@
-use documents::prelude::*;
-use std::{
-    error::Error,
-    fmt::Display,
-    fs::File,
-    io::{BufReader, Lines},
-    path::PathBuf,
-};
-
-mod day1;
-mod day10;
-mod day11;
-mod day12;
-mod day13;
-mod day2;
-mod day3;
-mod day4;
-mod day5;
-mod day6;
-mod day7;
-mod day8;
-mod day9;
+use std::{error::Error, fmt::Display};
 
 mod prelude {
-    pub use super::{IntoOpt, IntoWhoops, NoneError, Whoops, OK};
+    pub use super::{IntoOpt, IntoWhoops, NoneError, OK, Whoops};
     pub use documents::prelude::*;
     pub use easy_ext::ext;
-    pub use itertools::{repeat_n, Itertools};
+    pub use itertools::{Itertools, repeat_n};
     pub use memoize::memoize as cache;
     pub use rayon::prelude::*;
     pub use regex::Regex;
@@ -112,3 +91,18 @@ impl<T, E> IntoOpt<T> for Result<T, E> {
 fn main() {
     println!("{}", day13::task2());
 }
+
+mod day1;
+mod day10;
+mod day11;
+mod day12;
+mod day13;
+mod day14;
+mod day2;
+mod day3;
+mod day4;
+mod day5;
+mod day6;
+mod day7;
+mod day8;
+mod day9;

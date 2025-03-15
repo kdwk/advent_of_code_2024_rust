@@ -29,7 +29,8 @@ fn score(stone: Stone, depth: u32, max_depth: u32) -> i64 {
     } else if stone.value == 0 {
         score(Stone::new(1), depth + 1, max_depth)
     } else if let Some((stone1, stone2)) = stone.split() {
-        score(stone1, depth + 1, max_depth) + score(stone2, depth + 1, max_depth)
+        score(stone1, depth + 1, max_depth)
+            + score(stone2, depth + 1, max_depth)
     } else {
         score(Stone::new(stone.value * 2024), depth + 1, max_depth)
     }
